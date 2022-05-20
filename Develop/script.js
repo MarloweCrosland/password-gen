@@ -26,48 +26,67 @@ function genPass(){
 
 
   // possible chars to choose from
-  var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+  var lowerCase = ('abcdefghijklmnopqrstuvwxyz');
   var allCaps = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   var randomNum = '1234567890'
   var specialChar = '~!@#$%^&*_-+=`|\(){}[]:;<>,.?/()';
   
   // if user selects yes, the password contains special chars
   // create an empty array for characters from the lists selected)
-  passArray = ['']
+  
+
+    var passArray = []
 
   if (askChars === 'Yes' || askChars === "YES" || askChars === 'yes'){
-    passArray.push(specialChar)};
+    passArray.push(specialChar.split(''))};
   if (askNums === 'Yes' || askNums === "YES" || askNums === 'yes'){
-    passArray.push(randomNum)};
+    passArray.push(randomNum.split(''))};
   
   if (askCaps === 'Yes' || askCaps === "YES" || askCaps === 'yes'){
-    passArray.push(allCaps)};
+    passArray.push(allCaps.split(''))};
 
     if (askLows === 'Yes' || askLows === "YES" || askLows === 'yes'){
-      passArray.push(lowerCase)};
+      passArray.push(lowerCase.split(''))};
+
+// use .split to make strings into char arrays
+// use .flat to remove nested arrays
+
+console.log(passArray.flat());
 
 
+// shuffle function
+let arrayShuffle = function(arr){
+  let newPos,
+  temp;
 
- // get a random number with max at howmany
- var randomNum = getRandomInt(howMany);
-  function getRandomInt(max){
-    return Math.floor(Math.random()*max);
+  for(let i = arr.length -1; i > 0; i--){
+    newPos = Math.floor(Math.random() * (i+1));
+    temp= arr[i];
+    arr[i] = arr[newPos];
+    arr[newPos] = temp;
   }
+  return arr;
+};
+
+//shuffle the passArray
+
+var newArray = arrayShuffle(passArray.flat());
+
+console.log(newArray);
+
+// make the newArray as short as the user wanted (howMany)
+
+
+var howLong = parseInt(howMany)
+
+newArray.length = howLong
+console.log(newArray);
+// expected output: shuffled chars of the right length
+
 
 }
 
- 
-
+ genPass();
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
-genPass();
-
-console.log(passArray)
-
-
-
-// i am trying to include all of the possible character choices inside an array and then randomly select
-//inside the array up to the number of the characters chosen
