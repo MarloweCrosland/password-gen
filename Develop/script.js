@@ -81,12 +81,15 @@ var howLong = parseInt(howMany)
 
 newArray.length = howLong
 console.log(newArray);
-// expected output: shuffled chars of the right length
+// expected output: shuffled chars of specified length (howMany)
 
 
+//concatenate & display the password in textarea
+document.getElementById('password').value = 'Your password is ' + newArray.join('');
 }
 
  genPass();
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
