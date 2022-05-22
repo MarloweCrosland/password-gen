@@ -48,6 +48,13 @@ function genPass(){
     if (askLows === 'Yes' || askLows === "YES" || askLows === 'yes'){
       passArray.push(lowerCase.split(''))};
 
+      if (confirm('have you chosen at least one character type?') == false){
+        genPass();
+      }
+      
+
+  
+
 // use .split to make strings into char arrays
 // use .flat to remove nested arrays
 
