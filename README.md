@@ -1,11 +1,13 @@
-# Password Generator Starter Code
+# Random Password Generator
 
 
 This will create a randomly shuffled password including character types the user chooses from a series of prompts. The user also chooses how many characters long the password is.
 
+/assets/photos/screenshot-01.png
 
 
 
+/assets/photos/screenshot-02.png
 
 
 criteria to meet on this project:

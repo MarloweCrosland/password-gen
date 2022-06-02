@@ -14,6 +14,7 @@ function writePassword() {
 }
 
 function genPass(){
+ 
   // give prompts asking for password criteria
   window.alert ('Please choose your password criteria by typing yes or no');
   var askChars = window.prompt ('Would you like to use special characters?');
