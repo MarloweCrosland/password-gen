@@ -1,11 +1,14 @@
 # Password Generator Starter Code
 
 
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
+This will create a randomly shuffled password including character types the user chooses from a series of prompts. The user also chooses how many characters long the password is.
 
 
+
+
+
+
+criteria to meet on this project:
 
 GIVEN I need a new, secure password
 WHEN I click the button to generate a password
