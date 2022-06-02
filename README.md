@@ -4,15 +4,11 @@
 This will create a randomly shuffled password including character types the user chooses from a series of prompts. The user also chooses how many characters long the password is.
 
 
-![screenshot01](http://assets/photos/screenshot-01.png)
+![screenshot01](/photos/screenshot-01.png)
 
-![screenshot02](http://assets/photos/screenshot-02.png)
-
-
+![screenshot02](/photos/screenshot-02.png)
 
 
-
-/assets/photos/screenshot-02.png
 
 
 criteria to meet on this project:
